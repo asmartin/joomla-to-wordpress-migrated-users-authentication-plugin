@@ -1,11 +1,11 @@
 === Joomla to WP Migrated Users Authentication Plugin ===
 Contributors: lucky62
-Plugin URI: http://lovelyland.info/wp/1/joomla2wp-mig-auth-plugin/
+Plugin URI: http://lovelyland.info/1/joomla2wp-mig-auth-plugin/
 Tags: joomla, mambo, wordpress, authentication, migration, password
 Tested up to: WP 3.1
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WTSJR2PXXSVD8&lc=SK&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Requires at least: WP 3.X
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 A plugin to authenticate users migrated from Joomla/Mambo to Wordpress.
 
@@ -41,8 +41,9 @@ No questions at this moment...
 
 
 == Support ==
-Put question here: http://lovelyland.info/wp/1/joomla2wp-mig-auth-plugin/
+Put question here: http://lovelyland.info/1/joomla2wp-mig-auth-plugin/
 
 
 == Changelog ==
 19.3.2011 - 1.0.0 - first release
+27.3.2011 - 1.0.1 - links correction
