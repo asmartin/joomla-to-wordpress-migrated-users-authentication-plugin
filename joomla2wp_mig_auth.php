@@ -2,7 +2,7 @@
 /*
 Plugin Name: Joomla2WP Migrated Users Authentication Plugin
 Description: Authenticate users migrated from Joomla and update their WP passwords
-Version: 1.0.0
+Version: 1.0.1
 Author: lucky62
 */
 
