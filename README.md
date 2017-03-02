@@ -1,8 +1,9 @@
 ## Joomla to WP Migrated Users Authentication Plugin
-Contributors: [lucky62](https://profiles.wordpress.org/lucky62/), [asmartin](https://github.com/asmartin)
-Tested up to: WP 4.7
-Requires at least: WP 3.X
-Stable tag: 1.1.0
+
+-    Contributors: [lucky62](https://profiles.wordpress.org/lucky62/), [asmartin](https://github.com/asmartin)
+-    Tested up to: WP 4.7
+-    Requires at least: WP 3.X
+-    Stable tag: 1.1.0
 
 A plugin to authenticate users migrated from Joomla/Mambo to Wordpress.
 
@@ -22,6 +23,7 @@ stored in the `user_pass` field. For all subsequent logins, the user will now be
 plugin is free for any purpose...
 
 ## Changelog
-19.3.2011 - 1.0.0 - first release
-27.3.2011 - 1.0.1 - links correction
-01.3.2017 - 1.1.0 - added support for PHPass, tested with Joomla 2.5.x and Wordpress 4.7.x
+
+-    19.3.2011 - 1.0.0 - first release
+-    27.3.2011 - 1.0.1 - links correction
+-    01.3.2017 - 1.1.0 - added support for PHPass, tested with Joomla 2.5.x and Wordpress 4.7.x
