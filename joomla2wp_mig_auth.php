@@ -2,8 +2,8 @@
 /*
 Plugin Name: Joomla2WP Migrated Users Authentication Plugin
 Description: Authenticate users migrated from Joomla and update their WP passwords
-Version: 1.0.1
-Author: lucky62
+Version: 1.1.0
+Author: lucky62, asmartin
 */
 
 // plugin must run before any other authentication plugins -
@@ -29,8 +29,15 @@ function joomla_mig_auth( $user, $username, $password ) {
    if ( !$userdata->joomlapass ) return $user;
 
    // authenticate against stored joomla password
-   if ( auth_joomla( $username, $password, $userdata->joomlapass ) ) {
-
+   $auth_success = false;
+   if (strpos($userdata->joomlapass, '$P$') === 0) {
+       // Use PHPass method
+       $auth_success = auth_joomla_phpass( $username, $password, $userdata->joomlapass );
+   } else {
+       // Use md5:salt method
+       $auth_success = auth_joomla( $username, $password, $userdata->joomlapass );
+   }
+   if ( $auth_success ) {
       // update WP user password
       $user_id = $userdata->ID;
       wp_update_user( array ('ID' => $user_id, 'user_pass' => $password) ) ;
@@ -50,6 +57,15 @@ function joomla_mig_auth( $user, $username, $password ) {
 // default method is md5 hash of password + salt
 // $joomlapass contains md5 hash and salt separated by colon ':'
 // for other methods of joomla encryption methods refer to Joomla JUserHelper class
+
+function auth_joomla_phpass( $username, $password, $joomlapass ) {
+        // Use PHPass's portable hashes with a cost of 10.
+        $phpass = new PasswordHash(10, true);
+
+        $password = stripslashes($password);
+
+        return $phpass->CheckPassword($password, $joomlapass);
+}
 
 function auth_joomla( $username, $password, $joomlapass ) {
 
